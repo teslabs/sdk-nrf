@@ -36,7 +36,7 @@ The :file:`nrf` subfolder in that directory contains all :file:`.rst` source fil
 Documentation for samples and libraries are provided in a :file:`README.rst` or :file:`.rst` file in the same directory as the code.
 
 Building the documentation output requires building output for all documentation sets.
-Currently, there are four sets: nrf, nrfxlib, zephyr, and mcuboot (covering the contents of :file:`bootloader/mcuboot`).
+Currently, there are five sets: nrf, nrfxlib, nrfx, zephyr, and mcuboot (covering the contents of :file:`bootloader/mcuboot`).
 Since there are links from the ncs documentation set into other documentation sets, the other documentation sets must be built first.
 
 Building documentation output
@@ -99,6 +99,12 @@ Complete the following steps to build the documentation output:
 
       This step can take up to 15 minutes.
 
+   #. Run ninja to build the nrfx documentation:
+
+        .. code-block:: console
+
+           ninja nrfx
+
    #. Run ninja to build the mcuboot documentation:
 
       .. code-block:: console
@@ -156,6 +162,12 @@ To clean the build folders for the nrfxlib documentation:
 
    ninja clean-nrfxlib
 
+To clean the build folders for the nrfx documentation:
+
+.. code-block:: console
+
+   ninja clean-nrfx
+
 To clean the build folders for the MCUboot documentation:
 
 .. code-block:: console
@@ -190,6 +202,7 @@ the source tree:
    cmake -GNinja -Bbuild/ -Hncs/nrf/doc
    # Now run ninja on the generated build system:
    ninja -C build/ zephyr
+   ninja -C build/ nrfx
    ninja -C build/ mcuboot
    ninja -C build/ nrfxlib-inventory
    ninja -C build/ nrf
