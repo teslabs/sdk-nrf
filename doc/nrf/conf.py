@@ -126,8 +126,8 @@ breathe_separate_member_pages = True
 # Options for ncs_include ------------------------------------------------------
 
 ncs_include_mapping = {
-    "nrf": utils.get_rstdir("nrf"),
-    "zephyr": utils.get_rstdir("zephyr"),
+    "nrf": utils.get_srcdir("nrf"),
+    "zephyr": utils.get_srcdir("zephyr"),
 }
 
 # Options for html_redirect ----------------------------------------------------
