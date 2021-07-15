@@ -8,6 +8,6 @@ Modem libraries
    :glob:
    :caption: Subpages:
 
-   ../../../include/modem/*
-   ../../../lib/zzhc/*
-   ../../../lib/at_host/*
+   *
+   zzhc
+   at_host
